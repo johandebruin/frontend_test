@@ -1,0 +1,55 @@
+/*
+    Document   : image_rotator
+    Created on : Sep 1, 2013, 9:03:59 AM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+/*
+    Document   : mixins
+    Created on : Aug 31, 2013, 7:11:46 PM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+#rotator {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px; }
+  #rotator li {
+    list-style: none;
+    overflow: hidden;
+    position: relative; }
+    #rotator li.hide {
+      display: none; }
+    @media only screen and (min-width: 482px) and (max-width: 961px) {
+      #rotator li img {
+        width: 100%;
+        height: auto; } }
+    @media only screen and (max-width: 481px) {
+      #rotator li img {
+        width: 100%;
+        height: auto; } }
+    #rotator li .tooltip {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 2px solid #000000;
+      margin: auto;
+      padding-left: 10px; }
+      #rotator li .tooltip p {
+        margin-bottom: 0px;
+        margin-top: 0px; }
+      #rotator li .tooltip h4 {
+        margin-bottom: 0px;
+        margin-top: 0px; }

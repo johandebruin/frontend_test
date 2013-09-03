@@ -1,0 +1,66 @@
+/*
+    Document   : tabbed_content
+    Created on : Sep 2, 2013, 3:38:17 PM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    Document   : mixins
+    Created on : Aug 31, 2013, 7:11:46 PM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+#navigator {
+  margin-top: 40px; }
+  @media only screen and (max-width: 481px) {
+    #navigator {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 482px) and (max-width: 961px) {
+    #navigator {
+      padding-left: 0px; } }
+  #navigator li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center; }
+    #navigator li.selected {
+      background-color: #EE2E24; }
+    @media only screen and (max-width: 481px) {
+      #navigator li {
+        width: 90%; } }
+    @media only screen and (min-width: 482px) and (max-width: 961px) {
+      #navigator li {
+        width: 90%; } }
+
+#navigation li {
+  list-style: none;
+  border: 2px solid black;
+  padding: 10px; }
+  #navigation li.hide {
+    display: none; }
+  @media only screen and (max-width: 481px) {
+    #navigation li {
+      width: 90%; } }
+  @media only screen and (min-width: 482px) and (max-width: 961px) {
+    #navigation li {
+      width: 90%; } }
+@media only screen and (max-width: 481px) {
+  #navigation {
+    padding-left: 0px; } }
+@media only screen and (min-width: 482px) and (max-width: 961px) {
+  #navigation {
+    padding-left: 0px; } }
+
+.clearfix {
+  clear: both; }

@@ -1,0 +1,25 @@
+/*
+    Document   : mixins
+    Created on : Aug 31, 2013, 7:11:46 PM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+
+//Variables for responsive design
+$break-small: 481px; //Mobile phones
+$break-large: 961px; //Tablets
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large) { @content; }
+    }
+}

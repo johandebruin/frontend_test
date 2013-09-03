@@ -1,0 +1,78 @@
+/*
+    Document   : tabbed_content
+    Created on : Sep 2, 2013, 3:38:17 PM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+@import "functions.scss";
+
+#navigator {
+    margin-top: 40px;
+    
+    @include respond-to(mobile) { 
+        padding-left: 0px
+    }
+    
+    @include respond-to(tablet) {
+        padding-left: 0px
+    }
+    
+    li {
+        list-style: none;
+        float: left;
+        width: 100px;
+        height: 20px;
+        border: 2px solid black;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 15px;
+        text-align: center;
+        
+        &.selected {
+            background-color: #EE2E24;
+        }
+        
+        @include respond-to(mobile) { 
+            width: 90%;
+        }
+        
+        @include respond-to(tablet) {
+            width: 90%;
+        }
+    }
+}
+
+#navigation {
+    li {
+        list-style: none;
+        border: 2px solid black;
+        padding: 10px;
+        
+        &.hide {
+            display: none;
+        }
+        
+        @include respond-to(mobile) { 
+            width: 90%;
+        }
+        
+        @include respond-to(tablet) {
+            width: 90%;
+        }
+    }
+    
+    @include respond-to(mobile) { 
+        padding-left: 0px
+    }
+    
+    @include respond-to(tablet) {
+        padding-left: 0px
+    }
+}
+
+
+.clearfix {
+    clear: both;
+}

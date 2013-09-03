@@ -1,0 +1,71 @@
+/*
+    Document   : main
+    Created on : Aug 31, 2013, 6:33:58 PM
+    Author     : Johan de Bruin
+    Description: General style for all the pages 
+    Variables and general style.
+*/
+/*
+    Document   : mixins
+    Created on : Aug 31, 2013, 7:11:46 PM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+body {
+  background: url("../img/bg_final.jpg") no-repeat scroll center top black;
+  color: #CCCCCC;
+  font-family: Arial,sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0; }
+
+header {
+  background: url("../img/bg-header.jpg") no-repeat scroll center top black;
+  margin-bottom: 30px;
+  width: 100%;
+  min-width: 320px; }
+  header .head {
+    background: url("../img/bg-nav.jpg") no-repeat scroll center center transparent;
+    height: 112px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%; }
+  header #riot-games-logo {
+    text-align: center; }
+  header div a img {
+      border: 0;
+  }
+
+article {
+  background-color: #131313;
+  box-shadow: 0 16px 20px 6px #000000;
+  margin: 0 auto 70px;
+  padding: 40px 25px;
+  position: relative;
+  width: 80%;
+  min-width: 320px;
+  max-width: 1000px; }
+  article h1 {
+    color: #FFFFFF;
+    font-family: Arial,sans-serif;
+    font-size: 72px;
+    letter-spacing: -6px;
+    line-height: 58px;
+    margin: 0 0 18px; }
+    @media only screen and (max-width: 481px) {
+      article h1 {
+        font-size: 42px;
+        letter-spacing: -2px; } }
+    @media only screen and (min-width: 482px) and (max-width: 961px) {
+      article h1 {
+        font-size: 52px;
+        letter-spacing: -4px; } }
+  article a, article a:visited {
+    color: #EE2E24; }
+  article .red {
+    color: #DC291E; }

@@ -1,0 +1,84 @@
+/*
+    Document   : main
+    Created on : Aug 31, 2013, 6:33:58 PM
+    Author     : Johan de Bruin
+    Description: General style for all the pages 
+    Variables and general style.
+*/
+
+$minWidth: 320px;
+
+@import "functions.scss";
+
+body {
+    background: url("../img/bg_final.jpg") no-repeat scroll center top #000000;
+    color: #CCCCCC;
+    font-family: Arial,sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url("../img/bg-header.jpg") no-repeat scroll center top #000000;
+    margin-bottom: 30px;
+    width: 100%;
+    
+    min-width: $minWidth;
+    
+    a {
+        border: 0;
+    }
+    
+    .head {
+        background: url("../img/bg-nav.jpg") no-repeat scroll center center transparent;
+        height: 112px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    
+    #riot-games-logo {
+        text-align: center;
+    }
+}
+
+article {
+    background-color: #131313;
+    box-shadow: 0 16px 20px 6px #000000;
+    margin: 0 auto 70px;
+    padding: 40px 25px;
+    position: relative;
+    width: 80%;
+    
+    min-width: $minWidth;
+    max-width: 1000px;
+    
+    h1 {
+        color: #FFFFFF;
+        font-family: Arial,sans-serif;
+        font-size: 72px;
+        letter-spacing: -6px;
+        line-height: 58px;
+        margin: 0 0 18px;
+        
+        @include respond-to(mobile) { 
+            font-size: 42px;
+            letter-spacing: -2px;
+        }
+        
+        @include respond-to(tablet) {
+            font-size: 52px;
+            letter-spacing: -4px;
+        }
+    }
+    
+    a, a:visited {
+        color: #EE2E24;
+    }
+    
+    .red {
+        color: #DC291E;
+    }
+    
+}

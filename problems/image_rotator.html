@@ -1,59 +1,88 @@
-<!doctype html>
+<!--
+By Johan de Bruin August 31 of 2013 
+http://www.johandebruin.com
+-->
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Frontend Coding Test</title>
-	<link type="text/css" rel="stylesheet" href="../css/style.css" />
-	<style type="text/css">
-		#rotator {
-			width: 450px;
-			height: 300px;
-			border: 1px solid black;
-			background: #aaa;
-			text-align: center;
-		}
-	</style>
-</head>
-<body>
-	<div id="headwrap">
-	<div class="head">
-		<div class="logo">Riot Games</div>
-	</div>
-</div>
+    <head>
+        <title>Image rotator | Johan de Bruin</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<div id="content">
-	<h1><span class="red">Image</span> Rotator</h1>
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <link type="text/css" rel="stylesheet" href="../css/image_rotator.css" />
 
-	<p>
-		Using the below images, make a rotator in the box below that shows only one of the Katarina skins every 3 seconds.  The rotator should also display the correct image title and description with each image change.
-	</p>
-	<p>
-		It would be really awesome if the slides animated between one another!
-	</p>
+        <script type="text/javascript" src="../js/image_rotator.js"></script>
+        <script type="text/javascript">
+            (function() {
+                'use strict';
 
-	<hr />
+                window.onload = function() {
+                    var rotator = new ImageRotator("rotator", 3000);
+                };
+            }());
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="head">
+                <a id="riot-games-logo" href="#" title="Riot Games"><img alt="Riot Games logo" src="../img/logo.jpg" /></a>
+            </div>
 
-	<h4>Katarina</h4>
-	<p>Fruitcake bonbon donut jelly-o brownie biscuit marzipan pie.</p>
-	<img src="../img/kat_1.jpg" /><br/>
+        </header>
 
-	<h4>Red Card Katarina</h4>
-	<p>Cheesecake marzipan cupcake biscuit candy canes pudding.</p>
-	<img src="../img/kat_2.jpg" /><br/>
+        <article>
 
-	<h4>Kitty Cat Katarina</h4>
-	<p>Applicake topping halvah lemon drops wypas cotton candy.</p>
-	<img src="../img/kat_3.jpg" /><br/>
 
-	<h4>High Command Katarina</h4>
-	<p>Oat cake macaroon souffle cupcake chupa chups chocolate bar bear claw dragee lemon drops.</p>
-	<img src="../img/kat_4.jpg" /><br/>
+            <h1><span class="red">Image</span> Rotator</h1>
 
-	<hr/>
+            <hr />
 
-	<div id="rotator">
-		Rotator Here
-	</div>
-</div>
-
-</body>
+            <ul id="rotator">
+                <li>
+                    <div>
+                        <div class="tooltip">
+                        <h4>Katarina</h4>
+                        <p>Fruitcake bonbon donut jelly-o brownie biscuit marzipan pie.</p>
+                        </div>
+                        <img src="../img/kat_1.jpg" />
+                    </div>
+                </li>
+                <li class="hide">
+                    <div>
+                        <div class="tooltip">
+                        <h4>Red Card Katarina</h4>
+                        <p>Cheesecake marzipan cupcake biscuit candy canes pudding.</p>
+                        </div>
+                        <img src="../img/kat_2.jpg" />
+                    </div>
+                </li>
+                <li class="hide">
+                    <div>
+                        <div class="tooltip">
+                        <h4>Kitty Cat Katarina</h4>
+                        <p>Applicake topping halvah lemon drops wypas cotton candy.</p>
+                        </div>
+                        <img src="../img/kat_3.jpg" />
+                    </div>
+                </li>
+                <li class="hide">
+                    <div>
+                        <div class="tooltip">
+                        <h4>High Command Katarina</h4>
+                        <p>Oat cake macaroon souffle cupcake chupa chups chocolate bar bear claw dragee lemon drops.</p>
+                        </div>
+                        <img src="../img/kat_4.jpg" />
+                    </div>
+                </li>
+            </ul>
+            
+            <hr />
+            <p>I've try to create a proof of concept here and make the slideshow responsive.
+            Normally, the animation it's condicioned to the proportions of the elements, and
+            you need to define an aspect ratio.</p>
+            
+            <p>As a proof of concept I separate the style from the javascript implementation,
+            making all responsive thanks to gather the height of the component on real time.</p>
+        </article>
+    </body>
 </html>

@@ -1,0 +1,66 @@
+/*
+    Document   : image_rotator
+    Created on : Sep 1, 2013, 9:03:59 AM
+    Author     : Johan
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*
+    TODO customize this sample style
+    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+*/
+@import "functions.scss";
+
+#rotator {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    
+    
+    li {
+        list-style: none;
+        overflow: hidden;
+        position: relative;
+        
+        &.hide {
+            display: none;
+        }
+        
+        img {
+            
+            @include respond-to(tablet) { 
+                width: 100%;
+                height: auto;
+            }
+            
+            @include respond-to(mobile) { 
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        .tooltip {
+            background-color:rgba(0, 0, 0, 0.5);
+            border: 2px solid #000000;
+            margin: auto;
+            
+            
+            padding-left: 10px;
+            
+            p {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+            
+            h4 {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+        }
+    }
+}
